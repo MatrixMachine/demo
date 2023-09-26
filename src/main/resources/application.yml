@@ -1,0 +1,12 @@
+server:
+  port: 9999
+
+
+configs:
+  filterConfigs:
+    ACTIVITY:
+      - ActivityInfoQueryFilter
+      - UserInfoQueryFilter
+      - PlaceInfoQueryFilter
+      - ValidPeriodFilter
+      - UserFilter

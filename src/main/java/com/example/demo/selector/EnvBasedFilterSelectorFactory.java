@@ -3,7 +3,6 @@ package com.example.demo.selector;
 import com.example.demo.config.FilterConfigProperties;
 import com.example.demo.enums.BizEnum;
 import com.example.demo.model.ActivityRequest;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -31,7 +30,7 @@ public class EnvBasedFilterSelectorFactory implements ActivityFilterSelectorFact
       case ACTIVITY:
         List<String> filterNames = filterConfigProperties.getFilterConfigs()
                 .getOrDefault(ACTIVITY, Collections.unmodifiableList(new ArrayList<>()));
-        return new LocalListBasedFilterSelector(filterNames);
+        return new FakeFilterSelector(filterNames);
       default:
         break;
     }

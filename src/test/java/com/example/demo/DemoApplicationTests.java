@@ -29,7 +29,6 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Map<BizEnum, List<String>> configs = filterConfigProperties.getFilterConfigs();
 		ActivityRequest activityRequest = new ActivityRequest();
 		activityRequest.setBizEnum(BizEnum.ACTIVITY);
 		activityRequest.setUserId(99);
